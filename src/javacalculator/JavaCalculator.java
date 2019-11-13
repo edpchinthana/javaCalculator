@@ -18,6 +18,7 @@ public class JavaCalculator {
         // TODO code application logic here
         System.out.println("Hello World");
         System.out.println("Padme have coded");
+        System.out.println("Padma is trying to understand Java & GIT");
     }
     
 }
