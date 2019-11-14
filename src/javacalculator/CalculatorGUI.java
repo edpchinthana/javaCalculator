@@ -171,6 +171,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton18.setText("=");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -381,6 +386,71 @@ public class CalculatorGUI extends javax.swing.JFrame {
         str = str + '.';
         jLabel1.setText(str);
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        String str = jLabel1.getText();
+        char [] strArr = str.toCharArray();
+        int operatorCount=0;
+        for(int x=0;x<str.length();x++){
+            if(strArr[x]=='+'||strArr[x]=='-'||strArr[x]=='*'||strArr[x]=='/'){
+                operatorCount++;
+            }
+        }
+        if(operatorCount==1){
+           int operatorIdentifier=0;
+           int operatorIndex=0;
+           for(int x=0;x<str.length();x++){
+                if(strArr[x]=='+'){
+                    operatorIdentifier = 1;
+                    operatorIndex=x;
+                }
+                if(strArr[x]=='-'){
+                    operatorIdentifier = 2;
+                    operatorIndex=x;
+                }
+                if(strArr[x]=='*'){
+                    operatorIdentifier = 3;
+                    operatorIndex=x;
+                }
+                if(strArr[x]=='/'){
+                    operatorIdentifier = 4;
+                    operatorIndex=x;
+                }
+            }
+          String firstOperand="";
+          String secondOperand="";
+          
+          //Getting the first operand
+          for(int x=0;x<operatorIndex;x++){
+              firstOperand = firstOperand + strArr[x];
+          }
+          //Getting the second operand
+          for(int x=operatorIndex+1;x<str.length();x++){
+              secondOperand = secondOperand + strArr[x];
+          }
+          double firstOperandDouble = Double.parseDouble(firstOperand);
+          double secondOperandDouble = Double.parseDouble(secondOperand);
+          double answer=0;
+          switch(operatorIdentifier){
+              case 1:
+                  answer = firstOperandDouble + secondOperandDouble;
+                  break;
+              case 2:
+                  answer = firstOperandDouble - secondOperandDouble;
+                  break;
+              case 3:
+                  answer = firstOperandDouble * secondOperandDouble;
+                  break;
+              case 4:
+                  answer = firstOperandDouble / secondOperandDouble;
+                  break;
+          }
+          String answerString= Double.toString(answer);
+          jLabel1.setText(answerString);
+        }else{
+            jLabel1.setText("Error!Single Operation Only");
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
 
     /**
      * @param args the command line arguments
