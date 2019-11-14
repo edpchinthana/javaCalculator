@@ -70,18 +70,48 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jButton4.setText("-");
 
         jButton5.setText("7");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("8");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("9");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("*");
 
         jButton9.setText("4");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setText("5");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setText("6");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("/");
 
@@ -109,6 +139,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jButton16.setText(".");
 
         jButton17.setText("0");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
 
         jButton18.setText("=");
 
@@ -237,6 +272,55 @@ public class CalculatorGUI extends javax.swing.JFrame {
         str = str + '3';
         jLabel1.setText(str);
     }//GEN-LAST:event_jButton15ActionPerformed
+    
+    //Number 4 button
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '4';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton9ActionPerformed
+    
+    //Number 5 button
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '5';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    //Number 6 button
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '6';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    //Number 7 button
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '7';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    //Number 8 button
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '8';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    //Number 9 button
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '9';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    //Number 0 button
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '0';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton17ActionPerformed
 
     /**
      * @param args the command line arguments
