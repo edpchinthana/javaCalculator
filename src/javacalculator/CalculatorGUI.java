@@ -86,6 +86,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jButton12.setText("/");
 
         jButton13.setText("1");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jButton14.setText("2");
 
@@ -202,6 +207,13 @@ public class CalculatorGUI extends javax.swing.JFrame {
         }
         jLabel1.setText(strNew);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    //Number 1 button
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '1';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
