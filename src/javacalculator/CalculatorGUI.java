@@ -49,7 +49,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("calculatorDisplay");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
 
         jButton1.setText("C");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
