@@ -66,8 +66,18 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton3.setText("+");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("-");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("7");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +101,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton8.setText("*");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("4");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -114,6 +129,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton12.setText("/");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton13.setText("1");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +157,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         jButton16.setText(".");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setText("0");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -321,6 +346,41 @@ public class CalculatorGUI extends javax.swing.JFrame {
         str = str + '0';
         jLabel1.setText(str);
     }//GEN-LAST:event_jButton17ActionPerformed
+
+    //Addition
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '+';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    //Subtraction
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '-';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    //Multiplication
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '*';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    //Division
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '/';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    //Dot
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        String str = jLabel1.getText();
+        str = str + '.';
+        jLabel1.setText(str);
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
