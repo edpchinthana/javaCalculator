@@ -10,6 +10,10 @@ package javacalculator;
  * @author Pasindu Chinthana
  */
 public class CalculatorGUI extends javax.swing.JFrame {
+    double firstNum;
+    double secondNum;
+    double result;
+    String operation;
 
     /**
      * Creates new form CalculatorGUI
@@ -50,7 +54,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
         TextField_Display = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(java.awt.Color.gray);
 
+        btn_C.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_C.setLabel("C");
         btn_C.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +64,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_D.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_D.setText("D");
         btn_D.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +72,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_Divide.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Divide.setText("÷");
         btn_Divide.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +80,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_Back.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Back.setText("<-");
         btn_Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +88,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_7.setText("7");
         btn_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +96,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_8.setText("8");
         btn_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +104,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_9.setText("9");
         btn_9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +112,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_Multifly.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Multifly.setText("x");
         btn_Multifly.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +120,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_4.setText("4");
         btn_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +128,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_5.setText("5");
         btn_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +136,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_6.setText("6");
         btn_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +144,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_Minus.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Minus.setText("-");
         btn_Minus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +152,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_1.setText("1");
         btn_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +160,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_2.setText("2");
         btn_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +168,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_3.setText("3");
         btn_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,6 +176,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_Plus.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Plus.setText("+");
         btn_Plus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +184,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_PlusMinus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btn_PlusMinus.setText("+/-");
         btn_PlusMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +192,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_0.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_0.setText("0");
         btn_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +200,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_Dot.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Dot.setText(".");
         btn_Dot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +208,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        btn_Equal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btn_Equal.setText("=");
         btn_Equal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,6 +216,8 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        TextField_Display.setEditable(false);
+        TextField_Display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         TextField_Display.setText(" ");
         TextField_Display.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,7 +286,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(TextField_Display, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_D, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_C, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -283,64 +310,89 @@ public class CalculatorGUI extends javax.swing.JFrame {
                     .addComponent(btn_2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_Plus, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_PlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_0, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_Dot, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_Equal, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_0, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_Dot, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_Equal, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_PlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CActionPerformed
-        // TODO add your handling code here:
+        TextField_Display.setText("");
     }//GEN-LAST:event_btn_CActionPerformed
 
     private void btn_DActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DActionPerformed
-        // TODO add your handling code here:
+        TextField_Display.setText("");
     }//GEN-LAST:event_btn_DActionPerformed
 
     private void btn_DivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DivideActionPerformed
-        // TODO add your handling code here:
+        firstNum=Double.parseDouble(TextField_Display.getText());
+        TextField_Display.setText("");
+        operation="/";
     }//GEN-LAST:event_btn_DivideActionPerformed
 
     private void btn_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BackActionPerformed
-        // TODO add your handling code here:
+        int leng=TextField_Display.getText().length();
+        int number=TextField_Display.getText().length()-1;
+        String store;
+        
+        if(leng>0)
+        {
+            StringBuilder back=new StringBuilder(TextField_Display.getText());
+            back.deleteCharAt(number);
+            store=back.toString();
+            TextField_Display.setText(store);
+        }
+        
     }//GEN-LAST:event_btn_BackActionPerformed
 
     private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_7.getText();
+        TextField_Display.setText(Num);
+        
     }//GEN-LAST:event_btn_7ActionPerformed
 
     private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_8.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_8ActionPerformed
 
     private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_9.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_9ActionPerformed
 
     private void btn_MultiflyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MultiflyActionPerformed
-        // TODO add your handling code here:
+        firstNum=Double.parseDouble(TextField_Display.getText());
+        TextField_Display.setText("");
+        operation="x";
     }//GEN-LAST:event_btn_MultiflyActionPerformed
 
     private void btn_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_4ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_4.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_4ActionPerformed
 
     private void btn_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_5ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_5.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_5ActionPerformed
 
     private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_6.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_6ActionPerformed
 
     private void btn_MinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MinusActionPerformed
-        // TODO add your handling code here:
+        firstNum=Double.parseDouble(TextField_Display.getText());
+        TextField_Display.setText("");
+        operation="-";
     }//GEN-LAST:event_btn_MinusActionPerformed
 
     private void btn_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_1ActionPerformed
@@ -348,31 +400,64 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_1ActionPerformed
 
     private void btn_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_2.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_2ActionPerformed
 
     private void btn_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_3ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_3.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_3ActionPerformed
 
     private void btn_PlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PlusActionPerformed
-        // TODO add your handling code here:
+        firstNum=Double.parseDouble(TextField_Display.getText());
+        Double.parseDouble(TextField_Display.getText());
+        TextField_Display.setText("");
+        operation="+";
     }//GEN-LAST:event_btn_PlusActionPerformed
 
     private void btn_PlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_PlusMinusActionPerformed
-        // TODO add your handling code here:
+        double padme=Double.parseDouble(TextField_Display.getText());
+        padme=padme*(-1);
+        TextField_Display.setText(String.valueOf(padme));
+        
     }//GEN-LAST:event_btn_PlusMinusActionPerformed
 
     private void btn_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_0ActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_0.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_0ActionPerformed
 
     private void btn_DotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DotActionPerformed
-        // TODO add your handling code here:
+        String Num= TextField_Display.getText()+btn_Dot.getText();
+        TextField_Display.setText(Num);
     }//GEN-LAST:event_btn_DotActionPerformed
 
     private void btn_EqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EqualActionPerformed
-        // TODO add your handling code here:
+        // **********************************
+        switch(operation)
+        {
+            case "+":    result=firstNum+Double.parseDouble(TextField_Display.getText());
+                         TextField_Display.setText(Double.toString(result));
+                         break;
+                         
+            case "-":    result=firstNum-Double.parseDouble(TextField_Display.getText());
+                         TextField_Display.setText(Double.toString(result));
+                         break; 
+                         
+            case "/":    result=firstNum/Double.parseDouble(TextField_Display.getText());
+                         TextField_Display.setText(Double.toString(result));
+                         break; 
+                         
+            case "x":    result=firstNum*Double.parseDouble(TextField_Display.getText());
+                         TextField_Display.setText(Double.toString(result));
+                         break;
+                         
+            default:     TextField_Display.setText("");
+                         break;        
+                         
+        }
+        
     }//GEN-LAST:event_btn_EqualActionPerformed
 
     private void TextField_DisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextField_DisplayActionPerformed
