@@ -218,6 +218,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         TextField_Display.setEditable(false);
         TextField_Display.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        TextField_Display.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         TextField_Display.setText(" ");
         TextField_Display.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
