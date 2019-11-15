@@ -70,7 +70,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnClear.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnClear.setBackground(new java.awt.Color(153, 255, 255));
         jBtnClear.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnClear.setText("C");
         jBtnClear.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn7.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn7.setBackground(new java.awt.Color(153, 255, 255));
         jBtn7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn7.setText("7");
         jBtn7.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn4.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn4.setBackground(new java.awt.Color(153, 255, 255));
         jBtn4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn4.setText("4");
         jBtn4.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +97,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn5.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn5.setBackground(new java.awt.Color(153, 255, 255));
         jBtn5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn5.setText("5");
         jBtn5.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +106,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn6.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn6.setBackground(new java.awt.Color(153, 255, 255));
         jBtn6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn6.setText("6");
         jBtn6.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp1.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp1.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp1.setText("()");
         jBtnOp1.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +124,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp3.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp3.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp3.setText("/");
         jBtnOp3.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +133,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp2.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp2.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp2.setText("%");
         jBtnOp2.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +142,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn8.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn8.setBackground(new java.awt.Color(153, 255, 255));
         jBtn8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn8.setText("8");
         jBtn8.addActionListener(new java.awt.event.ActionListener() {
@@ -151,7 +151,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn9.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn9.setBackground(new java.awt.Color(153, 255, 255));
         jBtn9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn9.setText("9");
         jBtn9.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +160,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp4.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp4.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp4.setText("*");
         jBtnOp4.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +169,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp5.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp5.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp5.setText("-");
         jBtnOp5.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +178,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn1.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn1.setBackground(new java.awt.Color(153, 255, 255));
         jBtn1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn1.setText("1");
         jBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -187,7 +187,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn2.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn2.setBackground(new java.awt.Color(153, 255, 255));
         jBtn2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn2.setText("2");
         jBtn2.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +196,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn3.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn3.setBackground(new java.awt.Color(153, 255, 255));
         jBtn3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn3.setText("3");
         jBtn3.addActionListener(new java.awt.event.ActionListener() {
@@ -205,7 +205,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp6.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp6.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp6.setText("+");
         jBtnOp6.addActionListener(new java.awt.event.ActionListener() {
@@ -214,7 +214,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtn0.setBackground(new java.awt.Color(0, 51, 153));
+        jBtn0.setBackground(new java.awt.Color(153, 255, 255));
         jBtn0.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtn0.setText("0");
         jBtn0.addActionListener(new java.awt.event.ActionListener() {
@@ -223,7 +223,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp8.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp8.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp8.setText(".");
         jBtnOp8.addActionListener(new java.awt.event.ActionListener() {
@@ -232,7 +232,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp9.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp9.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp9.setText("=");
         jBtnOp9.addActionListener(new java.awt.event.ActionListener() {
@@ -241,7 +241,7 @@ public class GUICalculator extends javax.swing.JFrame {
             }
         });
 
-        jBtnOp7.setBackground(new java.awt.Color(0, 51, 153));
+        jBtnOp7.setBackground(new java.awt.Color(153, 255, 255));
         jBtnOp7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jBtnOp7.setText("+/-");
         jBtnOp7.addActionListener(new java.awt.event.ActionListener() {
@@ -462,8 +462,7 @@ public class GUICalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnOp7ActionPerformed
 
     private void jBtnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnClearActionPerformed
-        String enterNum = jTextField2.getText() + jBtnClear.getText();
-        jTextField2.setText(enterNum);
+        
     }//GEN-LAST:event_jBtnClearActionPerformed
 
     private void jBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn4ActionPerformed
