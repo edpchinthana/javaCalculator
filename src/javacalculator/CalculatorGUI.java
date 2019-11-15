@@ -533,15 +533,30 @@ public class CalculatorGUI extends javax.swing.JFrame {
             signSelector=1;
         }
     }//GEN-LAST:event_jButton19ActionPerformed
-    /*
+    //Extract the second operand
+    private String secondOperandScanner(String str){
+       char [] strArr = str.toCharArray(); 
+       int length=str.length();
+       str="";
+       for(int x=1;x<length;x++){
+           str=str+strArr[x];
+       }
+       return str;
+    }
+    
+    //Do the calculation
     private String doTheOperation(){
         String str = jLabel1.getText();
+        char [] strArr = str.toCharArray();
+        int length=str.length();
+        String answerStr="";
+        double answerDouble=0;
         
         switch(operatorSelector){
             case 1:
                 
         }
-    }*/
+    }
     /**
      * @param args the command line arguments
      */
