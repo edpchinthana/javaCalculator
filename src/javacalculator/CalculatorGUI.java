@@ -283,6 +283,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
     String strFirstOperand;
     String strSecondOperand;
     int operatorSelector=0;
+    //signSelector
+    //0 for positive number, 1 for negative numbers
+    int signSelector=0;
     
     //Clear button function
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -495,10 +498,42 @@ public class CalculatorGUI extends javax.swing.JFrame {
             jLabel1.setText("Error!Single Operation Only");
         }
     }//GEN-LAST:event_jButton18ActionPerformed
-
+    
+    //signSelector
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
+        String str=jLabel1.getText();
+        char [] strArr = str.toCharArray();
+        int length=str.length();
+        if(signSelector==1){
+            if(operatorSelector==0){
+                str="";
+                for(int x=1;x<length;x++){
+                    str=str+strArr[x];
+                }
+                jLabel1.setText(str);
+            }else{
+                str=""+strArr[0];
+                for(int x=3;x<length;x++){
+                    str=str+strArr[x];
+                }
+                jLabel1.setText(str);
+            }
+            signSelector=0;
+        }else{
+            if(operatorSelector==0){
+                str="-"+str;
+                jLabel1.setText(str);
+            }else{
+                str=""+strArr[0]+" -";
+                for(int x=1;x<length;x++){
+                    str=str+strArr[x];
+                }
+                jLabel1.setText(str);
+            }
+            signSelector=1;
+        }
     }//GEN-LAST:event_jButton19ActionPerformed
+    /*
     private String doTheOperation(){
         String str = jLabel1.getText();
         
@@ -506,7 +541,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             case 1:
                 
         }
-    }
+    }*/
     /**
      * @param args the command line arguments
      */
