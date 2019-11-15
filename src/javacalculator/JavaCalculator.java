@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package javacalculator;
-
+import java.util.Scanner;
 /**
  *
  * @author Pasindu Chinthana
@@ -15,10 +15,8 @@ public class JavaCalculator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello World");
-        System.out.println("Padme have coded");
-        System.out.println("Githmi have coded");
+        GUICalculator calG = new GUICalculator();
+        calG.setVisible(true);
     }
     
 }
