@@ -545,17 +545,26 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }
     
     //Do the calculation
-    private String doTheOperation(){
-        String str = jLabel1.getText();
-        char [] strArr = str.toCharArray();
-        int length=str.length();
-        String answerStr="";
-        double answerDouble=0;
-        
-        switch(operatorSelector){
+    private String doTheOperation(String operand1, String operand2, int operator){
+        double firstOperandDouble = Double.parseDouble(operand1);
+        double secondOperandDouble = Double.parseDouble(operand2);
+        double answer=0;
+        switch(operator){
             case 1:
-                
+                answer=firstOperandDouble+secondOperandDouble;
+                break;
+            case 2:
+                answer=firstOperandDouble-secondOperandDouble;
+                break;
+            case 3:
+                answer=firstOperandDouble*secondOperandDouble;
+                break;
+            case 4:
+                answer=firstOperandDouble/secondOperandDouble;
+                break;
         }
+        String answerString =Double.toString(answer);
+        return answerString;
     }
     /**
      * @param args the command line arguments
