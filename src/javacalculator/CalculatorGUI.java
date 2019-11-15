@@ -282,10 +282,12 @@ public class CalculatorGUI extends javax.swing.JFrame {
     //Declaring variables for operands
     String strFirstOperand;
     String strSecondOperand;
+    int operatorSelector=0;
     
     //Clear button function
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jLabel1.setText("");
+        operatorSelector=0;
     }//GEN-LAST:event_jButton1ActionPerformed
     
     //Delete button function
@@ -298,6 +300,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
             strNew= strNew+strArr[x];
         }
         jLabel1.setText(strNew);
+        
+        //If all input items are deleted then remove the operatorSelector
+        if(strNew==""){
+            operatorSelector=0;
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     //Number 1 button
@@ -372,33 +379,48 @@ public class CalculatorGUI extends javax.swing.JFrame {
     //Addition
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String str = jLabel1.getText();
-        strFirstOperand = str;
-        str = "<html>+<br/>+</html>";
-        jLabel1.setText(str);
+        char [] strArr = str.toCharArray();
+        int operatorCount=0;
+        for(int x=0;x<str.length();x++){
+            if(strArr[x]=='+'||strArr[x]=='-'||strArr[x]=='*'||strArr[x]=='/'){
+                operatorCount++;
+            }
+        }
+        if(operatorCount==0){
+            strFirstOperand = str;
+            str ="+";
+            jLabel1.setText(str);
+            operatorSelector=1;
+        }else{
+            jLabel1.setText("Error!..");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     //Subtraction
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         String str = jLabel1.getText();
         strFirstOperand = str;
-        str = str + '-';
+        str = "-";
         jLabel1.setText(str);
+        operatorSelector=2;
     }//GEN-LAST:event_jButton4ActionPerformed
 
     //Multiplication
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         String str = jLabel1.getText();
         strFirstOperand = str;
-        str = str + '*';
+        str = "*";
         jLabel1.setText(str);
+        operatorSelector=3;
     }//GEN-LAST:event_jButton8ActionPerformed
 
     //Division
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         String str = jLabel1.getText();
         strFirstOperand = str;
-        str = str + '/';
+        str = "/";
         jLabel1.setText(str);
+        operatorSelector=4;
     }//GEN-LAST:event_jButton12ActionPerformed
 
     //Dot
@@ -477,7 +499,14 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton19ActionPerformed
-
+    private String doTheOperation(){
+        String str = jLabel1.getText();
+        
+        switch(operatorSelector){
+            case 1:
+                
+        }
+    }
     /**
      * @param args the command line arguments
      */
