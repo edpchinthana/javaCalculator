@@ -382,7 +382,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
     //Addition
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String str = jLabel1.getText();
-        char [] strArr = str.toCharArray();
         if(operatorSelector==0){
             strFirstOperand=str;
             
@@ -399,28 +398,48 @@ public class CalculatorGUI extends javax.swing.JFrame {
     //Subtraction
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         String str = jLabel1.getText();
-        strFirstOperand = str;
-        str = "-";
-        jLabel1.setText(str);
+        if(operatorSelector==0){
+            strFirstOperand=str;
+            
+        }else{
+            strSecondOperand = secondOperandScanner(str);
+            strFirstOperand = doTheOperation(strFirstOperand, strSecondOperand, operatorSelector);
+            
+        }
+        str="-";
         operatorSelector=2;
+        jLabel1.setText(str);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     //Multiplication
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         String str = jLabel1.getText();
-        strFirstOperand = str;
-        str = "*";
-        jLabel1.setText(str);
+        if(operatorSelector==0){
+            strFirstOperand=str;
+            
+        }else{
+            strSecondOperand = secondOperandScanner(str);
+            strFirstOperand = doTheOperation(strFirstOperand, strSecondOperand, operatorSelector);
+            
+        }
+        str="*";
         operatorSelector=3;
+        jLabel1.setText(str);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     //Division
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         String str = jLabel1.getText();
-        strFirstOperand = str;
-        str = "/";
-        jLabel1.setText(str);
+        if(operatorSelector==0){
+            strFirstOperand=str;
+            
+        }else{
+            strSecondOperand = secondOperandScanner(str);
+            strFirstOperand = doTheOperation(strFirstOperand, strSecondOperand, operatorSelector);
+        }
+        str="/";
         operatorSelector=4;
+        jLabel1.setText(str);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     //Dot
