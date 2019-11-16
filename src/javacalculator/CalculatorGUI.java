@@ -283,6 +283,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     //Declaring variables for operands
     String strFirstOperand;
