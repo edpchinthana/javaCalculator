@@ -49,7 +49,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Calculator");
+        setTitle("JCalculator");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
