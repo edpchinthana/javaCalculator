@@ -383,20 +383,17 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String str = jLabel1.getText();
         char [] strArr = str.toCharArray();
-        int operatorCount=0;
-        for(int x=0;x<str.length();x++){
-            if(strArr[x]=='+'||strArr[x]=='-'||strArr[x]=='*'||strArr[x]=='/'){
-                operatorCount++;
-            }
-        }
-        if(operatorCount==0){
-            strFirstOperand = str;
-            str ="+";
-            jLabel1.setText(str);
-            operatorSelector=1;
+        if(operatorSelector==0){
+            strFirstOperand=str;
+            
         }else{
-            jLabel1.setText("Error!..");
+            strSecondOperand = secondOperandScanner(str);
+            strFirstOperand = doTheOperation(strFirstOperand, strSecondOperand, operatorSelector);
+            
         }
+        str="+";
+        operatorSelector=1;
+        jLabel1.setText(str);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     //Subtraction
@@ -435,68 +432,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         String str = jLabel1.getText();
-        char [] strArr = str.toCharArray();
-        int operatorCount=0;
-        for(int x=0;x<str.length();x++){
-            if(strArr[x]=='+'||strArr[x]=='-'||strArr[x]=='*'||strArr[x]=='/'){
-                operatorCount++;
-            }
-        }
-        if(operatorCount==1){
-           int operatorIdentifier=0;
-           int operatorIndex=0;
-           for(int x=0;x<str.length();x++){
-                if(strArr[x]=='+'){
-                    operatorIdentifier = 1;
-                    operatorIndex=x;
-                }
-                if(strArr[x]=='-'){
-                    operatorIdentifier = 2;
-                    operatorIndex=x;
-                }
-                if(strArr[x]=='*'){
-                    operatorIdentifier = 3;
-                    operatorIndex=x;
-                }
-                if(strArr[x]=='/'){
-                    operatorIdentifier = 4;
-                    operatorIndex=x;
-                }
-            }
-          String firstOperand="";
-          String secondOperand="";
-          
-          //Getting the first operand
-          for(int x=0;x<operatorIndex;x++){
-              firstOperand = firstOperand + strArr[x];
-          }
-          //Getting the second operand
-          for(int x=operatorIndex+1;x<str.length();x++){
-              secondOperand = secondOperand + strArr[x];
-          }
-          double firstOperandDouble = Double.parseDouble(firstOperand);
-          double secondOperandDouble = Double.parseDouble(secondOperand);
-          double answer=0;
-          switch(operatorIdentifier){
-              case 1:
-                  answer = firstOperandDouble + secondOperandDouble;
-                  break;
-              case 2:
-                  answer = firstOperandDouble - secondOperandDouble;
-                  break;
-              case 3:
-                  answer = firstOperandDouble * secondOperandDouble;
-                  break;
-              case 4:
-                  answer = firstOperandDouble / secondOperandDouble;
-                  break;
-          }
-          String answerString="=";
-          answerString = answerString+Double.toString(answer);
-          jLabel1.setText(answerString);
-        }else{
-            jLabel1.setText("Error!Single Operation Only");
-        }
+        strSecondOperand = secondOperandScanner(str);
+        String strAnswer =doTheOperation(strFirstOperand,strSecondOperand,operatorSelector);
+        str="= "+strAnswer;
+        jLabel1.setText(str);
     }//GEN-LAST:event_jButton18ActionPerformed
     
     //signSelector
@@ -563,7 +502,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 answer=firstOperandDouble/secondOperandDouble;
                 break;
         }
+        operator =0;
         String answerString =Double.toString(answer);
+        strSecondOperand="0";
         return answerString;
     }
     /**
